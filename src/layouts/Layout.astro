@@ -1,7 +1,12 @@
 ---
+import "../styles/global.css";
 export interface Props {
 	title: string;
 }
+
+const getCurrentYear = () => {
+	return new Date().getFullYear();
+};
 
 const { title } = Astro.props;
 ---
@@ -15,22 +20,30 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<script>
+			import kwesforms from 'kwesforms';
+			kwesforms.init();
+		</script>
 	</head>
 	<body>
-		<slot />
+		<div class="p-2 grid grid-cols-1 md:grid-cols-2 gap-10">
+			<div class="bg-orangeRed md:min-h-[calc(100vh_-_16px)] center p-10 flex-col flex justify-between">
+				<header class="md:pb-20 center flex-col flex-1">
+					<h1 class="text-center">
+						<img src="/images/comb.svg" alt="Picture of a Broken Comb" class="mb-6" />
+						<img src="/images/broken-comb@2x.png" srcset="/images/broken-comb@2x.png 2x, /images/broken-comb.png 1x" alt="Broken Comb" class="mb-6 mx-auto" />
+					</h1>
+					<h2 class="text-lg font-bold text-center">Untangling the Web and Combing its Depths</h2>
+				</header>
+				<footer class="hidden md:block w-full font-mono text-center text-sm text-white">
+					Copyright &copy;{getCurrentYear}. <a href="http://ahhacreative.com" target="_blank">Ah Ha Creative, LLC</a>. All Rights Reserved.
+				</footer>
+			</div>
+			<div class="center py-10">
+				<div class="max-w-[440px]">
+					<slot />
+				</div>
+			</div>
+		</div>
 	</body>
 </html>
-<style is:global>
-	:root {
-		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background-color: #F6F6F6;
-	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
-</style>

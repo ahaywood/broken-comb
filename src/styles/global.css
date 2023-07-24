@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  ul {
+    @apply list-none m-0 p-0
+  }
+
+  li {
+    @apply before:content-['\_'] before:mr-1 leading-8;
+  }
+
+  p {
+    @apply mb-11 leading-8;
+  }
+
+  label {
+    @apply font-bold uppercase tracking-widest text-sm block
+  }
+
+  input[type=email],
+  input[type=text] {
+    @apply border-chromeWhite border-[3px] w-full font-mono font-bold px-6 h-16 focus:outline-none focus:border-orangeRed
+  }
+}
+
+@layer utilities {
+  .center {
+    @apply flex items-center justify-center;
+  }
+}
