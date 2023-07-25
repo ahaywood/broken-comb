@@ -10,7 +10,7 @@
   }
 
   li {
-    @apply before:content-['\_'] before:mr-1 leading-8;
+    @apply relative before:content-['\_'] before:absolute before:-left-4 leading-8 mb-4;
   }
 
   p {
