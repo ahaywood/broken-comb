@@ -5,6 +5,10 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    @apply scroll-smooth
+  }
+
   ul {
     @apply list-none m-0 p-0
   }
