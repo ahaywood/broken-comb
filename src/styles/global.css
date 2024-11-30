@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:wght@700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -6,11 +6,11 @@
 
 @layer base {
   html {
-    @apply scroll-smooth
+    @apply scroll-smooth;
   }
 
   ul {
-    @apply list-none m-0 p-0
+    @apply list-none m-0 p-0;
   }
 
   li {
@@ -18,16 +18,16 @@
   }
 
   p {
-    @apply mb-11 leading-8;
+    @apply mb-8 leading-8;
   }
 
   label {
-    @apply font-bold uppercase tracking-widest text-sm block
+    @apply font-bold uppercase tracking-widest text-sm block;
   }
 
-  input[type=email],
-  input[type=text] {
-    @apply border-chromeWhite border-[3px] w-full font-mono font-bold px-6 h-16 focus:outline-none focus:border-orangeRed
+  input[type="email"],
+  input[type="text"] {
+    @apply border-chromeWhite border-[3px] w-full font-mono font-bold px-6 h-16 focus:outline-none focus:border-orangeRed;
   }
 }
 
