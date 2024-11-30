@@ -1,5 +1,10 @@
 {
   "cSpell.words": [
     "Avenir"
-  ]
+  ],
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#4B0D63",
+    "titleBar.activeBackground": "#ff4101",
+    "titleBar.activeForeground": "#FDF9FE"
+  }
 }
