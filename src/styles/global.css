@@ -13,7 +13,7 @@
     @apply list-none m-0 p-0;
   }
 
-  li {
+  ul:not(.vote) li {
     @apply relative before:content-['\_'] before:absolute before:-left-4 leading-8 mb-4;
   }
 
@@ -21,13 +21,28 @@
     @apply mb-8 leading-8;
   }
 
-  label {
+  label:not(.no-style) {
     @apply font-bold uppercase tracking-widest text-sm block;
   }
 
   input[type="email"],
   input[type="text"] {
     @apply border-chromeWhite border-[3px] w-full font-mono font-bold px-6 h-16 focus:outline-none focus:border-orangeRed;
+  }
+
+  .button {
+    @apply bg-chromeWhite center w-full font-bold tracking-widest uppercase text-sm py-6 hover:bg-orangeRed hover:text-white mb-11;
+  }
+}
+
+@layer components {
+  label.no-style { @apply cursor-pointer; }
+
+  ul.vote {
+    @apply pl-10;
+    li:has(strong) { @apply pt-5 -indent-6; }
+    li { @apply mb-3 -indent-4; }
+    li input[type=checkbox] { @apply relative -left-2; }
   }
 }
 
