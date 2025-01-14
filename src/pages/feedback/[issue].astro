@@ -1,0 +1,40 @@
+---
+import Wide from '../../layouts/Wide.astro'
+
+// get the issue number out of the URL
+const { issue } = Astro.params;
+console.log({issue})
+---
+
+<Wide title="Feedback on Broken Comb">
+
+  <div class="px-10">
+    <h1 class="font-bold leading-7 mb-8">Feedback</h1>
+
+
+  <form action="https://kwesforms.com/api/foreign/forms/tNYk1U3DTyOwI09Owsr2" class="kf-form" method="post">
+
+    <label class="no-style" for="awesome"><strong>Awesome</strong> - What's great?</label>
+    <textarea name="awesome" id="awesome" class="w-full min-h-[100px] mb-10 border-2 border-chromeWhite p-2"></textarea>
+
+    <label class="no-style" for="boring"><strong>Boring</strong> - What's unengaging?</label>
+    <textarea name="boring" id="boring" class="w-full min-h-[100px] mb-10 border-2 border-chromeWhite p-2"></textarea>
+
+    <label class="no-style" for="confusing"><strong>Confusing</strong> - What's unclear?</label>
+    <textarea name="confusing" id="confusing" class="w-full min-h-[100px] mb-10 border-2 border-chromeWhite p-2"></textarea>
+
+    <label class="no-style" for="anything">Anything else?</label>
+    <textarea name="anything" id="anything" class="w-full min-h-[100px] mb-10 border-2 border-chromeWhite p-2"></textarea>
+
+    <input type="hidden" name="issue" value={issue} />
+
+    <button
+      class="button"
+      type="submit"
+      role="button"
+    >
+      Submit
+    </button>
+  </form>
+  </div>
+</Wide>
