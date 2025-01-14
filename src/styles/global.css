@@ -44,6 +44,19 @@
     li { @apply mb-3 -indent-4; }
     li input[type=checkbox] { @apply relative -left-2; }
   }
+
+  table.charts-css td { @apply !p-3 !text-sm; }
+
+  .results.bar {
+    --color-1: #ed4d1d !important;
+    --color-2: #bdc5ac !important;
+    --color-3: #e6a22c !important;
+    --color-4: #e9c99a !important;
+    --color-5: #b9ccea !important;
+    --color-6: #aff1ef !important;
+  }
+
+  .results.bar td:nth-child(1) { @apply !text-white; }
 }
 
 @layer utilities {
