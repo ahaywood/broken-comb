@@ -25,9 +25,15 @@
     @apply font-bold uppercase tracking-widest text-sm block;
   }
 
+  textarea,
+  input[type="url"],
   input[type="email"],
   input[type="text"] {
     @apply border-chromeWhite border-[3px] w-full font-mono font-bold px-6 h-16 focus:outline-none focus:border-orangeRed;
+  }
+
+  textarea {
+    @apply h-[150px];
   }
 
   .button {
@@ -45,6 +51,7 @@
     li input[type=checkbox] { @apply relative -left-2; }
   }
 
+  /* CSS Charts - Vote Results */
   table.charts-css td { @apply !p-3 !text-sm; }
 
   .results.bar {
@@ -62,5 +69,9 @@
 @layer utilities {
   .center {
     @apply flex items-center justify-center;
+  }
+
+  .field {
+    @apply mb-10;
   }
 }

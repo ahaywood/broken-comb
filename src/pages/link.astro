@@ -1,0 +1,43 @@
+---
+import Layout from '../layouts/Layout.astro'
+---
+
+<Layout title="Link">
+  <div class="px-10">
+    <h1 class="font-bold leading-7 mb-8">Found Something Great? Share It Here</h1>
+    <p class="mb-12">
+      If you've found a valuable resource, I'd love to share it with our newsletter community. Whether it's an article, tool, or insight that made a difference in your work, I'm grateful for your contribution.
+    </p>
+
+    <form action="https://kwesforms.com/api/foreign/forms/6otDo115vB16XswU8wsT" class="kf-form" method="post">
+      <div class="field">
+        <label for="email">Your Email</label>
+        <p class="mb-0 text-sm">I won't publish this anywhere. I just want to properly thank you for taking the time to share.</p>
+        <input type="email" name="email" id="email" required data-kw-rules="required|email" />
+      </div>
+
+      <div class="field">
+        <label for="social">Your Social Profile</label>
+        <p class="mb-3 text-sm">I'd like to properly attribute the link to you. This could be your Twitter, LinkedIn, BlueSky, or any other social profile. Be sure to include the full URL.</p>
+        <input type="text" name="social" id="social" required data-kw-rules="required|url" />
+      </div>
+
+      <div class="field">
+        <label for="title">Link Title</label>
+        <input type="text" name="title" id="title" required data-kw-rules="required" />
+      </div>
+
+      <div class="field">
+        <label for="link">Link URL</label>
+        <input type="url" name="link" id="link" required data-kw-rules="required|url" />
+      </div>
+
+      <div class="field">
+        <label for="description">Link Description</label>
+        <textarea name="description" id="description" required data-kw-rules="required"></textarea>
+      </div>
+
+      <button type="submit" class="button">Submit</button>
+    </form>
+  </div>
+</Layout>
