@@ -33,7 +33,7 @@
   }
 
   textarea {
-    @apply h-[150px];
+    @apply h-[150px] py-6;
   }
 
   .button {
