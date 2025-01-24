@@ -1,58 +1,83 @@
 ---
-import Wide from '../../layouts/Wide.astro'
+import Wide from "../../layouts/Wide.astro";
 
 // get the issue number out of the URL
 const { issue } = Astro.params;
-console.log({issue})
+console.log({ issue });
 ---
 
 <Wide title="Feedback on Broken Comb">
-
   <div class="px-10">
-    <h1 class="font-bold leading-7 mb-8">Share Your Take on this Week's Newsletter</h1>
+    <h1 class="font-bold leading-7 mb-8">
+      Share Your Take on this Week's Newsletter
+    </h1>
 
     <p class="mb-20">
-      Your feedback is invaluable in shaping future newsletters – from our deep dives to practical design guides and tech trend analysis. Whether you found this week's content particularly helpful or see areas where we could improve, your insights will help us deliver the best content possible. It only takes a minute to share your thoughts, and your input directly influences the content we create.
+      Your feedback is invaluable in shaping future newsletters – from our deep
+      dives to practical design guides and tech trend analysis. Whether you
+      found this week's content particularly helpful or see areas where we could
+      improve, your insights will help us deliver the best content possible. It
+      only takes a minute to share your thoughts, and your input directly
+      influences the content we create.
     </p>
 
+    <form
+      action="https://kwesforms.com/api/foreign/forms/tNYk1U3DTyOwI09Owsr2"
+      class="kf-form"
+      method="post"
+      data-kw-redirect="https://brokencomb.dev/feedback/thanks"
+    >
+      <div class="field">
+        <label for="name" class="no-style"><strong>Name</strong></label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          required
+          data-kw-rules="required"
+        />
+      </div>
 
-  <form action="https://kwesforms.com/api/foreign/forms/tNYk1U3DTyOwI09Owsr2" class="kf-form" method="post" data-kw-success-message="Thanks for taking the time to give your feedback!">
+      <div class="field">
+        <label for="email" class="no-style"><strong>Email</strong></label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          required
+          data-kw-rules="required"
+        />
+      </div>
 
-    <div class="field">
-      <label for="name" class="no-style"><strong>Name</strong></label>
-      <input type="text" name="name" id="name" required data-kw-rules="required" />
-    </div>
+      <div class="field">
+        <label class="no-style" for="awesome"
+          ><strong>Awesome</strong> - What's great?</label
+        >
+        <textarea name="awesome" id="awesome"></textarea>
+      </div>
 
-    <div class="field">
-      <label for="email" class="no-style"><strong>Email</strong></label>
-      <input type="email" name="email" id="email" required data-kw-rules="required" />
-    </div>
+      <div class="field">
+        <label class="no-style" for="boring"
+          ><strong>Boring</strong> - What's unengaging?</label
+        >
+        <textarea name="boring" id="boring"></textarea>
+      </div>
 
-    <div class="field">
-      <label class="no-style" for="awesome"><strong>Awesome</strong> - What's great?</label>
-      <textarea name="awesome" id="awesome"></textarea>
-    </div>
+      <div class="field">
+        <label class="no-style" for="confusing"
+          ><strong>Confusing</strong> - What's unclear?</label
+        >
+        <textarea name="confusing" id="confusing"></textarea>
+      </div>
 
-    <div class="field">
-      <label class="no-style" for="boring"><strong>Boring</strong> - What's unengaging?</label>
-      <textarea name="boring" id="boring"></textarea>
-    </div>
+      <div class="field">
+        <label class="no-style" for="anything">Anything else?</label>
+        <textarea name="anything" id="anything"></textarea>
+      </div>
 
-    <div class="field">
-      <label class="no-style" for="confusing"><strong>Confusing</strong> - What's unclear?</label>
-      <textarea name="confusing" id="confusing"></textarea>
-    </div>
+      <input type="hidden" name="issue" value={issue} />
 
-    <div class="field">
-      <label class="no-style" for="anything">Anything else?</label>
-      <textarea name="anything" id="anything"></textarea>
-    </div>
-
-    <input type="hidden" name="issue" value={issue} />
-
-    <button class="button" type="submit" role="button">
-      Submit
-    </button>
-  </form>
+      <button class="button" type="submit" role="button"> Submit </button>
+    </form>
   </div>
 </Wide>
