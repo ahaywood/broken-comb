@@ -1,0 +1,28 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+import {
+  getCollection,
+  getEntry,
+  render,
+  type CollectionEntry,
+} from "astro:content";
+const { issue } = Astro.params;
+const issueData = await getEntry("issues", `${issue}`);
+
+interface Props {
+  post: CollectionEntry<"issues">;
+}
+
+if (!issueData) {
+  // Handle Error, for example:
+  throw new Error("Could not find the issue");
+}
+const { Content } = await render(issueData);
+---
+
+<Layout title="Previous Issues">
+  <div class="issue-content">
+    <Content />
+  </div>
+</Layout>

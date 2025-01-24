@@ -64,6 +64,14 @@
   }
 
   .results.bar td:nth-child(1) { @apply !text-white; }
+
+  .issue-content {
+    a { @apply border-b-1 border-black;}
+    a.button { @apply bg-red-500 center !inline-flex text-white font-bold rounded-sm px-5 py-2 border-none;
+      &.secondary { @apply bg-black text-white; }
+      &.tertiary { @apply bg-chromeWhite text-black; }
+    }
+  }
 }
 
 @layer utilities {

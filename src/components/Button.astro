@@ -1,0 +1,11 @@
+---
+const { href, className } = Astro.props;
+---
+
+<div class="center">
+  <a
+    href={href}
+    class={` ${className === "secondary" ? "bg-black text-white" : ""}`}
+    ><slot /></a
+  >
+</div>
