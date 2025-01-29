@@ -11,7 +11,8 @@ const issues = defineCollection({
     title: z.string(),
     slug: z.string(),
     publishedAt: z.date(),
-    status: z.enum(["planned", "in-progress", "published"]),
+    status: z.enum(["planned", "draft", "published"]),
+    issue: z.number(),
     tags: z.array(z.string()).optional(),
   }),
 });
