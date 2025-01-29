@@ -1,5 +1,5 @@
 ---
-import Layout from "../../layouts/Layout.astro";
+import WideLayout from "../../layouts/Wide.astro";
 
 import {
   getCollection,
@@ -9,6 +9,15 @@ import {
 } from "astro:content";
 const { issue } = Astro.params;
 const issueData = await getEntry("issues", `${issue}`);
+
+// The time is displaying like this: Wed Jan 22 2025 18:00:00 GMT-0600 (Central Standard Time)
+// Change it to this: January 22, 2025
+const publishedAt = new Date(issueData?.data.publishedAt as Date);
+const formattedDate = publishedAt.toLocaleDateString("en-US", {
+  month: "long",
+  day: "numeric",
+  year: "numeric",
+});
 
 interface Props {
   post: CollectionEntry<"issues">;
@@ -21,8 +30,17 @@ if (!issueData) {
 const { Content } = await render(issueData);
 ---
 
-<Layout title="Previous Issues">
-  <div class="issue-content">
+<WideLayout title="Previous Issues">
+  <div class="issue-content px-10">
+    <div class="border-b-[3px] border-[#e7eed8] mb-10 pb-12">
+      <strong class="text-xs tracking-wider text-[#bdc5ac]">SENT DATE:</strong>
+      <h3 class="font-bold mb-4 !pt-0">{formattedDate}</h3>
+      <strong class="text-xs tracking-wider text-[#bdc5ac]">SUBJECT:</strong>
+      <h1 class="text-2xl font-bold">{issueData.data.title}</h1>
+    </div>
+
     <Content />
+
+    <!-- TODO: Add a form to register for the newsletter -->
   </div>
-</Layout>
+</WideLayout>

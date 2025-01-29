@@ -3,24 +3,22 @@ title: 80% of TypeScript Power Comes From 20% of the Features
 slug: 2025-01-23-typescript-101
 publishedAt: 2025-01-23
 status: published
+issue: 2
 ---
 
 import Button from '../../../components/Button.astro';
-
-# January 23, 2025
-## 80% of TypeScript Power Comes From 20% of the Features
-
+import Box from '../../../components/Box.astro';
 
 Hey there!
 
 Special thanks to anyone that filled out the survey from the last email!  One of the top results was **TypeScript**. So, guess what this week's issue is all about?! … TypeScript! Following the typical( — after 1 issue can it be called typical?!) Broken Comb format, let's go wide and deep. Even though we'll start with 101, hopefully, there's something here for everyone.
 
-> Also! If you didn't vote there's still time and I would love your feedback.
+Also! If you didn't vote there's still time and I would love your feedback.
 <Button href="https://www.brokencomb.dev/vote">Take the Survey</Button>
 <div class="text-center my-2">or</div>
 <Button href="https://www.brokencomb.dev/results" className="secondary">🍿 Show me the Results</Button>
 
-## ;tk Heading
+## Framework Opinions: What Laravel Taught Me About JavaScript
 
 Lately, I've been experimenting with Laravel. That's right. Let me explain (and I'll don't worry, this comes back to TypeScript.) In the JavaScript ecosystem, we LOVE being composable. We love that we can configure our stack to be whatever we want it to be. You do you!
 
@@ -204,13 +202,14 @@ interface PersonType = {
 	firstName: string,
   lastName: string,
   isAwesome: boolean
- }
+}
 
- const person: PersonType {
+const person: PersonType {
   firstName: "Amy",
   lastName: "Dutton",
   isAwesome: true
-};```
+};
+```
 
 One benefit to listing it out separately, is now you can `export` `PersonType` and use it within another file. This helps keep data consistent across multiple files!
 
@@ -280,35 +279,28 @@ If you want to go a little bit deeper, I did a session for Women Who Code. Even 
 3. [Microsoft's Official TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html)
   - This is the official TypeScript documentation. I know sometimes documentation can be overwhelming, especially if it's a new technology, but Microsoft has done a great job of making this handbook readable and easy to understand.
 
-> Next week, we'll take a look at:
-> 👉 Real examples from React components
-> 👉 Common type patterns in React
-> 👉 Handling component props and state
-> 👉 Type inference best practices
+<Box>
+Next week, we'll take a look at:
+
+- 👉 Real examples from React components
+- 👉 Common type patterns in React
+- 👉 Handling component props and state
+- 👉 Type inference best practices
+</Box>
 
 ---
 
 ## 👁️ Things I Have my Eye On
 
 1. Lenny was a former product lead at AirBnB. Now, he's an Angel Investor for the who's who of Silicon Valley. He has a podcast ([Lenny's Podcast](https://www.lennysnewsletter.com/podcast)) and a [SubStack](https://www.lennysnewsletter.com/) *full* of resources. Recently, he (and his team) surveyed 6,500 tech professionals on the tools they use. **What's in your stack: The state of tech tools in 2025** is an interesting read. Not surprisingly, the biggest difference in tooling over the last few years has been with AI.
-
-https://www.lennysnewsletter.com/p/d1a45ac5-43b6-4943-a7fd-9ccbab54eacd
-
-1. I'm a huge fan of Adam Argyle. One, he's just a fun person, but two, he does a great job of explaining things and making really boring and tedious concepts fun and engaging. Recently, he wrote a post called 6 CSS Snippets Every Front-End Developer Should Know in 2025. So, of course, I clicked. No leaving me behind!
-
-https://nerdy.dev/6-css-snippets-every-front-end-developer-should-know-in-2025
-
-- Side note: I need to spend time with the HTML Dialog element. Adam mentioned it in his article and I've seen it mentioned multiple times (Frontend Masters [here](https://frontendmasters.com/blog/basic-dialog-usage-and-gotchas-to-watch-for/) and [here](https://frontendmasters.com/blog/animating-dialog/)), including this article from Cassidy Williams ([A Couple of CSS tricks of Dialog Elements](https://cassidoo.co/post/css-for-dialogs/)).
-
-1. Speaking of Cassidy, she shared a link in her newsletter for the Top Pens of 2024. I'll admit, my first thought was “Yeah! A pen snob, just like me.” But these are CODE Pens and so inspirational.  . Also, let's take a minute to recognize how many of Jhey's pens are featured. 👏
-
-https://codepen.io/2024/popular/pens/
-
-1. I mentioned Tailwind v4 in the last email. [Now, it's officially released](https://tailwindcss.com/blog/tailwindcss-v4). TBH, I'm still trying to decide how I feel about all the custom properties/variables. But, like most things, I need to build a project before I can get a true feel for the updates.
+2. I'm a huge fan of Adam Argyle. One, he's just a fun person, but two, he does a great job of explaining things and making really boring and tedious concepts fun and engaging. Recently, he wrote a post called [6 CSS Snippets Every Front-End Developer Should Know in 2025](https://nerdy.dev/6-css-snippets-every-front-end-developer-should-know-in-2025). So, of course, I clicked. No leaving me behind!
+  - Side note: I need to spend time with the HTML Dialog element. Adam mentioned it in his article and I've seen it mentioned multiple times (Frontend Masters [here](https://frontendmasters.com/blog/basic-dialog-usage-and-gotchas-to-watch-for/) and [here](https://frontendmasters.com/blog/animating-dialog/)), including this article from Cassidy Williams ([A Couple of CSS tricks of Dialog Elements](https://cassidoo.co/post/css-for-dialogs/)).
+3. Speaking of Cassidy, she shared a link in her newsletter for the [Top Pens of 2024](https://codepen.io/2024/popular/pens/). I'll admit, my first thought was “Yeah! A pen snob, just like me.” But these are CODE Pens and so inspirational. Also, let's take a minute to recognize how many of Jhey's pens are featured. 👏
+4. I mentioned Tailwind v4 in the last email. [Now, it's officially released](https://tailwindcss.com/blog/tailwindcss-v4). TBH, I'm still trying to decide how I feel about all the custom properties/variables. But, like most things, I need to build a project before I can get a true feel for the updates.
 
 ---
 
-# Feedback
+## Feedback
 
 I would still love your feedback on this newsletter. I'm still trying to settle into a format and I want to ensure that it's moving in the right direction.
 
@@ -316,8 +308,14 @@ When I was a newly wed, I told my husband, “If you don't like something I cook
 
 Feel free to reply directly to this email or fill out [the feedback form](https://www.brokencomb.dev/feedback/2) ABC style:
 
-- *Awesome* - What's Great?
-- *Boring* - What's unengaging?
-- *Confusing* - What's unclear?
+- **Awesome** - What's Great?
+- **Boring** - What's unengaging?
+- **Confusing** - What's unclear?
 - and anything else?
+
+---
+
+Until next time, keep coding,
+
+Amy
 

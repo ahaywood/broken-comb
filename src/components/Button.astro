@@ -2,10 +2,14 @@
 const { href, className } = Astro.props;
 ---
 
-<div class="center">
+<div class="text-center link-button-wrapper">
   <a
     href={href}
-    class={` ${className === "secondary" ? "bg-black text-white" : ""}`}
-    ><slot /></a
+    class={`link-button
+      ${className === "secondary" ? "secondary" : ""}
+      ${className === "tertiary" ? "tertiary" : ""}
+    `}
   >
+    <slot />
+  </a>
 </div>

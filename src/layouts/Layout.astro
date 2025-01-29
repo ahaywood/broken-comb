@@ -1,51 +1,74 @@
 ---
 import "../styles/global.css";
 export interface Props {
-	title: string;
+  title: string;
 }
 
 const getCurrentYear = () => {
-	return new Date().getFullYear();
+  return new Date().getFullYear();
 };
 
 const { title } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description">
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-		<!-- Fathom - beautiful, simple website analytics -->
-			<script src="https://cdn.usefathom.com/script.js" data-site="UIJGEUAM" defer></script>
-		<!-- / Fathom -->
-		<!-- Kwes forms -->
-		<script src="https://kwesforms.com/v2/kf-script.js" defer></script>
-		<!-- / Kwes forms -->
-	</head>
-	<body>
-		<div class="p-2 grid grid-cols-1 md:grid-cols-2 gap-10">
-			<div class="bg-orangeRed md:h-[calc(100vh_-_16px)] center p-10 flex-col flex justify-between md:sticky md:top-0">
-				<header class="md:pb-20 center flex-col flex-1">
-					<h1 class="text-center">
-						<img src="/images/comb.svg" alt="Picture of a Broken Comb" class="mb-6" />
-						<img src="/images/broken-comb@2x.png" srcset="/images/broken-comb@2x.png 2x, /images/broken-comb.png 1x" alt="Broken Comb" class="mb-6 mx-auto" />
-					</h1>
-					<h2 class="text-lg font-bold text-center">Untangling the Web and<br />Combing the Depths of Dev & Design.</h2>
-				</header>
-				<footer class="hidden md:block w-full font-mono text-center text-sm text-white">
-					Copyright &copy;{getCurrentYear}. <a href="http://ahhacreative.com" target="_blank" class="hover:border-b-[1px] hover:border-white">Ah Ha Creative, LLC</a>. All Rights Reserved.
-				</footer>
-			</div>
-			<div class="center py-10">
-				<div class="max-w-[440px]">
-					<slot />
-				</div>
-			</div>
-		</div>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <!-- Fathom - beautiful, simple website analytics -->
+    <script src="https://cdn.usefathom.com/script.js" data-site="UIJGEUAM" defer
+    ></script>
+    <!-- / Fathom -->
+    <!-- Kwes forms -->
+    <script src="https://kwesforms.com/v2/kf-script.js" defer></script>
+    <!-- / Kwes forms -->
+  </head>
+  <body>
+    <div class="p-2 grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div
+        class="bg-orangeRed md:h-[calc(100vh_-_16px)] center p-10 flex-col flex justify-between md:sticky md:top-0"
+      >
+        <header class="md:pb-20 center flex-col flex-1">
+          <h1 class="text-center">
+            <a href="/">
+              <img
+                src="/images/comb.svg"
+                alt="Picture of a Broken Comb"
+                class="mb-6"
+              />
+              <img
+                src="/images/broken-comb@2x.png"
+                srcset="/images/broken-comb@2x.png 2x, /images/broken-comb.png 1x"
+                alt="Broken Comb"
+                class="mb-6 mx-auto"
+              />
+            </a>
+          </h1>
+          <h2 class="text-lg font-bold text-center">
+            Untangling the Web and<br />Combing the Depths of Dev & Design.
+          </h2>
+        </header>
+        <footer
+          class="hidden md:block w-full font-mono text-center text-sm text-white"
+        >
+          Copyright &copy;{getCurrentYear}. <a
+            href="http://ahhacreative.com"
+            target="_blank"
+            class="hover:border-b-[1px] hover:border-white"
+            >Ah Ha Creative, LLC</a
+          >. All Rights Reserved.
+        </footer>
+      </div>
+      <div class="center py-10">
+        <div class="max-w-[440px]">
+          <slot />
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

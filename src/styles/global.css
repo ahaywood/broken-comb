@@ -13,6 +13,7 @@
     @apply list-none m-0 p-0;
   }
 
+  ol li { @apply leading-8; }
   ul:not(.vote) li {
     @apply relative before:content-['\_'] before:absolute before:-left-4 leading-8 mb-4;
   }
@@ -67,10 +68,25 @@
 
   .issue-content {
     a { @apply border-b-1 border-black;}
-    a.button { @apply bg-red-500 center !inline-flex text-white font-bold rounded-sm px-5 py-2 border-none;
+    a.link-button { @apply bg-[#ff4101] inline-flex items-center justify-center text-white font-bold rounded-sm px-5 py-2 border-none;
       &.secondary { @apply bg-black text-white; }
       &.tertiary { @apply bg-chromeWhite text-black; }
     }
+    h2 { @apply text-xl font-bold pt-4; }
+    h3 { @apply text-lg font-bold pt-4; }
+    pre { @apply py-4 px-5 rounded-md font-normal mb-5; }
+    ul { @apply pb-5 pl-10 mb-4; }
+    ol + ul,
+    ul + ol { @apply pt-3;}
+    ol { @apply list-decimal pl-4 mb-4; }
+    h2:has(+ ol),
+    h2:has(+ ul) { @apply mb-4;}
+    ol li:has(+ li),
+    ul li:has(+ li) { @apply mb-6;}
+    hr { @apply my-10; }
+    blockquote { @apply border-chromeWhite border-l-[4px] pl-4; }
+    .box ul:last-child { @apply mb-0 pb-0; }
+    .link-button-wrapper:has(+ p) { @apply mb-10; }
   }
 }
 
